@@ -481,7 +481,7 @@ class MyAppState extends State<MyApp> {
     return MaterialApp(
       title: title,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -505,10 +505,10 @@ class MyAppState extends State<MyApp> {
 
                 // Then show a snackbar.
                 ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('$item dismissed')));
+                    .showSnackBar(SnackBar(content: Text('$item dismissed'), key: Key('${item}_dismissed')));
               },
               // Show a red background as the item is swiped away.
-              background: Container(color: Colors.red),
+              background: Container(color: Colors.blue),
               child: ListTile(
                 title: Text(item),
               ),
